@@ -25,20 +25,23 @@
     <label>Data Batismo</label>
 </div>
 
-<div>
+<div class="input-field col s12">
 
-    <select name="tipo_sanguineo" id="tipo_sanguineo">
+    <select>
+        <option  value="">Escolha uma Opção</option>
+        {{--name="tipo_sanguineo" id="tipo_sanguineo"--}}
 
     </select>
-
+    <label>Tipo Sanguineo</label>
 </div>
 
-<div>
+<div class="input-field col s12">
 
-    <select name="sexo" id="sexo">
-
+    <select >
+        <option value=""></option>
+        {{--name="sexo" id="sexo"--}}
     </select>
-
+    <label>Sexo</label>
 </div>
 
 <div class="input-field">

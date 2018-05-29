@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 //Route::resource('usuarios','Admin\UsersController@index');
 Route::get('/admin/membros',['as'=>'admin.membros','uses'=>'Admin\MembrosController@index']);
+
