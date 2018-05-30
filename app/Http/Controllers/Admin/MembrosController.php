@@ -20,12 +20,35 @@ class MembrosController extends Controller
     {
 
         $membros = Membros::all();
-        return view('admin.membros.index',$membros);
 
+//        $tipo_sanguineo = Membros::getEnumValues('Membros','tipo_sanguineo');
+
+        // dd($tipo_sanguineo);
+
+//        return view('admin.membros.adicionar', compact('tipo_sanguineo', 'membros'));
+        return view('admin.membros.index',$membros);
 
     }
     public function adicionar(){
+        return view('admin.membros.adicionar');
 
     }
 
+    public function salvar(Request $request){
+        $dados = $request->all();
+
+        if($request->hasFile('imagem')){
+            $imagem = $request->file('imagem');
+            $numero = rand(1111,9999);
+            $dir = "img/membros/";
+            $ex = $imagem->guessClientExtension();
+            $nomeImagem = "imagem".$numero.".".$ex;
+            $imagem->move($dir,$nomeImagem);
+            $dados['imagem'] = $dir."/".$nomeImagem;
+        }
+
+        Membros::created($dados);
+
+        return redirect()->route('admin.membros.index');
+    }
 }
