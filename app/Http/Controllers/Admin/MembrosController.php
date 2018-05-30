@@ -26,7 +26,7 @@ class MembrosController extends Controller
         // dd($tipo_sanguineo);
 
 //        return view('admin.membros.adicionar', compact('tipo_sanguineo', 'membros'));
-        return view('admin.membros.index',$membros);
+        return view('admin.membros.index',compact('membros'));
 
     }
     public function adicionar(){

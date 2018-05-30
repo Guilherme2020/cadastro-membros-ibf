@@ -15,24 +15,27 @@
 
 <div class="input-field">
     <input type="date" name="data_nascimento" value="{{isset($membro->data_nascimento) ? $membro->data_nascimento: ''}}" >
-    <label>Data Nascimento</label>
+    {{--<label>Data Nascimento</label>--}}
 </div>
 
 
 
 <div class="input-field">
     <input type="date" name="data_batismo" value="{{isset($membro->data_batismo)? $membro->data_batismo: '' }}">
-    <label>Data Batismo</label>
+    {{--<label>Data Batismo</label>--}}
 </div>
 
 
 <div class="input-field">
     <select name="sexo" id="sexo">
-        <option value="" disabled selected>Choose your option</option>
+        {{--<option value="" disabled selected>Choose your option</option>--}}
+        <option  value="{{$membro->sexo == 'masculino'? 'selected':''}}">Masculino</option>
+        <option value="{{$membro->sexo == 'feminino'? 'selected':''}}">Feminino</option>
+        {{--<option value="{{isset($membro->sexo['masculino']) ? $membro->sexo: '' }}">Masculino</option>--}}
 
-        <option value="{{isset($membro->sexo['masculino']) ? $membro->sexo: '' }}">Masculino</option>
+        {{--<option value="{{isset($membro->sexo['feminino']) ? $membro->sexo: ''}}">Feminino</option>--}}
 
-        <option value="{{isset($membro->sexo['feminino']) ? $membro->sexo: ''}}">Feminino</option>
+
     </select>
     <label>Sexo</label>
 </div>
