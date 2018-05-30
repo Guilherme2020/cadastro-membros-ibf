@@ -1,3 +1,4 @@
+
 <div class="input-field">
 
     <input type="text" name="nome" value="{{isset($membro->nome) ? $membro->nome : '' }}">
@@ -13,42 +14,60 @@
 
 </div>
 
+
+<p>Data nascimento</p>
 <div class="input-field">
     <input type="date" name="data_nascimento" value="{{isset($membro->data_nascimento) ? $membro->data_nascimento: ''}}" >
     {{--<label>Data Nascimento</label>--}}
 </div>
 
 
-
+<p>Data Batismo</p>
 <div class="input-field">
-    <input type="date" name="data_batismo" value="{{isset($membro->data_batismo)? $membro->data_batismo: '' }}">
     {{--<label>Data Batismo</label>--}}
+    <input type="date" name="data_batismo" placeholder="batistmo" value="{{isset($membro->data_batismo)? $membro->data_batismo: '' }}">
+
+</div>
+<p>Data Admissao</p>
+<div class="input-field">
+    <input type="date" name="data_admissão" value="{{isset($membro->data_admissão) ? $membro->data_admissão: ''}}" >
+    {{--<label>Data Nascimento</label>--}}
 </div>
 
 
 <div class="input-field">
-    <select name="sexo" id="sexo">
+    {{--<select name="sexo" id="sexo">--}}
         {{--<option value="" disabled selected>Choose your option</option>--}}
-        <option  value="{{$membro->sexo == 'masculino'? 'selected':''}}">Masculino</option>
-        <option value="{{$membro->sexo == 'feminino'? 'selected':''}}">Feminino</option>
+        {{--<option  value="{{$membro->sexo == 'masculino'? 'selected':''}}">Masculino</option>--}}
+        {{--<option value="{{$membro->sexo == 'feminino'? 'selected':''}}">Feminino</option>--}}
         {{--<option value="{{isset($membro->sexo['masculino']) ? $membro->sexo: '' }}">Masculino</option>--}}
 
         {{--<option value="{{isset($membro->sexo['feminino']) ? $membro->sexo: ''}}">Feminino</option>--}}
 
-
-    </select>
-    <label>Sexo</label>
+        {{--<option value="1">Option 1</option>--}}
+        {{--<option value="2">Option 2</option>--}}
+    {{--</select>--}}
+    {{--<label>Sexo</label>--}}
+    <input type="text"   value="{{isset($membro->sexo)? $membro->sexo: '' }}">
+    <label for="">Sexo</label>
 </div>
 
-<div class="input-field ">
+<div class="input-field">
 
-    <select name="tipo_sanguineo" id="tipo_sanguineo">
-        <option value=""></option>
-        <option value=""></option>
+    <input type="text"   value="{{isset($membro->tipo_sanguineo)? $membro->tipo_sanguineo: '' }}">
 
-    </select>
-    <label for="">Tipo Sanguineo</label>
+
 </div>
+
+{{--<div class="input-field col s12">--}}
+
+    {{--<select name="tipo_sanguineo" id="tipo_sanguineo">--}}
+        {{--<option value=""></option>--}}
+        {{--<option value=""></option>--}}
+
+    {{--</select>--}}
+    {{--<label for="">Tipo Sanguineo</label>--}}
+{{--</div>--}}
 
 <div class="input-field">
     <input type="text" name="nacionalidade" >

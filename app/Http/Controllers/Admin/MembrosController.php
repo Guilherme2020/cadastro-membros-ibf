@@ -47,8 +47,8 @@ class MembrosController extends Controller
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
 
-        Membros::created($dados);
+        Membros::create($dados);
 
-        return redirect()->route('admin.membros.index');
+        return redirect()->route('admin.membros');
     }
 }
