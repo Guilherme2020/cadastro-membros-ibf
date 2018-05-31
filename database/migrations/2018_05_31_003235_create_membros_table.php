@@ -17,6 +17,8 @@ class CreateMembrosTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('email')->unique();
+            $table->string('rg')->unique();
+            $table->string('cpf')->unique();
             $table->date('data_nascimento');
             $table->date('data_batismo');
             $table->date('data_admissao');

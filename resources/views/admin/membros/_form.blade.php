@@ -6,6 +6,19 @@
 
 </div>
 
+<div class="input-field">
+
+    <input type="text" name="rg" value="{{isset($membro->rg) ? $membro->rg : '' }}">
+    <label>Rg</label>
+
+</div>
+<div class="input-field">
+
+    <input type="text" name="cpf" value="{{isset($membro->cpf) ? $membro->cpf : '' }}">
+    <label>Cpf</label>
+
+</div>
+
 
 <div class="input-field">
 
@@ -36,7 +49,7 @@
 
 
 <div class="input-field ">
-    <label for="">Tipo Sanguineo</label>
+    {{--<label for="">Escola o tipo Sanguineo</label>--}}
     <select name="tipo_sanguineo" id="tipo_sanguineo">
         <option value="">Escolha o tipo Sanguineo</option>
         @foreach($tipoSanguineos as $tipoSanguineo)
@@ -46,55 +59,53 @@
 </div>
 
 <div class="input-field ">
-    <label for="">Sexo</label>
-    <select name="sexo" id="sexo">
+    {{--<label for="">Sexo</label>--}}
+    <select name="sexo"  id="sexo">
 
         <option value="">Sexo</option>
         @foreach($sexos as $sexo)
             <option value="{{$sexo}}">{{$sexo}}</option>
         @endforeach
     </select>
-
-
 </div>
 
 <div class="input-field">
-    <input type="text" name="nacionalidade" >
+    <input type="text" name="nacionalidade"  value="{{isset($membro->nacionalidade) ? $membro->nacionalidade: ''}}"  >
     <label>Nacionalidade</label>
 </div>
 
 <div class="input-field">
-    <input type="text" name="naturalidade" >
+    <input type="text" name="naturalidade"  value="{{isset($membro->naturalidade) ? $membro->naturalidade: ''}}"  >
     <label>Naturalidade</label>
 </div>
 
 <div class="input-field">
-    <input type="text" name="profissao" >
+    <input type="text" name="profissao" value="{{isset($membro->profissao) ? $membro->profissao: ''}}"  >
     <label>Profissão</label>
 </div>
 
 <div class="input-field">
-    <input type="number" name="cep" >
+    <input type="number" name="cep"  value="{{isset($membro->cep) ? $membro->cep: ''}}" >
     <label>cep</label>
 </div>
 
 <div  class="input-field">
-    <input type="number" name="numero_celular" >
+    <input type="number" name="numero_celular"  value="{{isset($membro->numero_celular) ? $membro->numero_celular: ''}}"  >
     <label>numero celular</label>
 </div>
 
 <div class="input-field">
-    <input type="number" name="telefone_fixo" >
+    <input type="number" name="telefone_fixo"  value="{{isset($membro->telefone_fixo) ? $membro->telefone_fixo: '' }}" >
     <label for="">telefone fixo</label>
 </div>
 
 <div class="input-field">
-    <input type="text" name="cidade" >
+    <input type="text" name="cidade" value="{{isset($membro->cidade) ? $membro->cidade:''}}" >
     <label for="">cidade</label>
 </div>
 
 <div class="input-field">
-    <input type="text" name="bairro" >
+    <input type="text" name="bairro"  value="{{isset($membro->bairro) ? $membro->bairro:''}}" >
     <label for="">bairro</label>
 </div>
 

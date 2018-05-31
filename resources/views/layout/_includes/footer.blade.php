@@ -7,6 +7,11 @@
         Materialize.updateTextFields();
         $(".button-collapse").sideNav();
     });
+    window.onload=function(){
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    }
 </script>
 </body>
 </html>
