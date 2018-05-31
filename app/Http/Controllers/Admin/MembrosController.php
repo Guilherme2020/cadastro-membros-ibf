@@ -75,10 +75,10 @@ class MembrosController extends Controller
 
         }
 
-        $membros = Membros::find($id);
-        $membros->update($dados);
+        $membro = Membros::find($id);
+        $membro->update($dados);
 
-        return redirect()->route('admin.membros',compact('membros'));
+        return redirect()->route('admin.membros',compact('membro'));
     }
 
     public function deletar($id)
