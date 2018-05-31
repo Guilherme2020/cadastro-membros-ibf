@@ -19,7 +19,7 @@ class CreateMembrosTable extends Migration
             $table->string('email')->unique();
             $table->date('data_nascimento');
             $table->date('data_batismo');
-            $table->date('data_admissão');
+            $table->date('data_admissao');
             $table->enum('sexo',['masculino','feminino']);
             $table->enum('tipo_sanguineo',['A+','A-','B+','B-','AB+','AB-','O+','O-']);
             $table->string('nacionalidade');

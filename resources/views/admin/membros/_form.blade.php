@@ -36,71 +36,68 @@
 
 
 <div class="input-field">
-    {{--<select name="sexo" id="sexo">--}}
-        {{--<option value="" disabled selected>Choose your option</option>--}}
-        {{--<option  value="{{$membro->sexo == 'masculino'? 'selected':''}}">Masculino</option>--}}
-        {{--<option value="{{$membro->sexo == 'feminino'? 'selected':''}}">Feminino</option>--}}
-        {{--<option value="{{isset($membro->sexo['masculino']) ? $membro->sexo: '' }}">Masculino</option>--}}
-
-        {{--<option value="{{isset($membro->sexo['feminino']) ? $membro->sexo: ''}}">Feminino</option>--}}
-
-        {{--<option value="1">Option 1</option>--}}
-        {{--<option value="2">Option 2</option>--}}
-    {{--</select>--}}
-    {{--<label>Sexo</label>--}}
-    <input type="text"   value="{{isset($membro->sexo)? $membro->sexo: '' }}">
-    <label for="">Sexo</label>
+    <label for="">Tipo Sanguineo</label>
+    <select name="tipo_sanguineo" id="tipo_sanguineo">
+        <option value="">Escolha o tipo Sanguineo</option>
+        @foreach($tipoSanguineos as $tipoSanguineo)
+            <option value="{{$tipoSanguineo}}">{{$tipoSanguineo}}</option>
+        @endforeach
+    </select>
 </div>
 
 <div class="input-field">
+    <label for="">Sexo</label>
+    <select name="sexo" id="sexo">
 
-    <input type="text"   value="{{isset($membro->tipo_sanguineo)? $membro->tipo_sanguineo: '' }}">
+        <option value="">Sexo</option>
+        @foreach($sexos as $sexo)
+            <option value="{{$sexo}}">{{$sexo}}</option>
+        @endforeach
+    </select>
 
 
 </div>
-
-{{--<div class="input-field col s12">--}}
-
-    {{--<select name="tipo_sanguineo" id="tipo_sanguineo">--}}
-        {{--<option value=""></option>--}}
-        {{--<option value=""></option>--}}
-
-    {{--</select>--}}
-    {{--<label for="">Tipo Sanguineo</label>--}}
-{{--</div>--}}
 
 <div class="input-field">
     <input type="text" name="nacionalidade" >
     <label>Nacionalidade</label>
 </div>
+
 <div class="input-field">
     <input type="text" name="naturalidade" >
     <label>Naturalidade</label>
 </div>
+
 <div class="input-field">
     <input type="text" name="profissao" >
     <label>Profissão</label>
 </div>
+
 <div class="input-field">
     <input type="number" name="cep" >
     <label>cep</label>
 </div>
+
 <div  class="input-field">
     <input type="number" name="numero_celular" >
     <label>numero celular</label>
 </div>
+
 <div class="input-field">
     <input type="number" name="telefone_fixo" >
     <label for="">telefone fixo</label>
 </div>
+
 <div class="input-field">
     <input type="text" name="cidade" >
     <label for="">cidade</label>
 </div>
+
 <div class="input-field">
     <input type="text" name="bairro" >
     <label for="">bairro</label>
 </div>
+
 <div class="file-field input-field">
     <div class="btn blue">
         <span>imagem</span>

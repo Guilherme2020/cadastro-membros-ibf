@@ -29,8 +29,12 @@ class MembrosController extends Controller
         return view('admin.membros.index',compact('membros'));
 
     }
-    public function adicionar(){
-        return view('admin.membros.adicionar');
+    public function adicionar(Membros $membro){
+
+        $tipoSanguineos = $membro->tipoSanguineos();
+        $sexos = $membro->tipoSexo();
+
+        return view('admin.membros.adicionar',compact('tipoSanguineos','sexos'));
 
     }
 
