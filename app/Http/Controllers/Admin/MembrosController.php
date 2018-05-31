@@ -55,4 +55,40 @@ class MembrosController extends Controller
 
         return redirect()->route('admin.membros');
     }
+
+    public function editar($id){
+        $membro = Membros::find($id);
+        return view('admin.membros.editar',array('membro'=> $membro));
+    }
+
+    public function atualizar(Request $request,$id){
+        $dados  = $request->all();
+
+        if($request->hasFile('imagem')){
+            $imagem = $request->file('imagem');
+            $numero = rand(1111,9999);
+            $dir = "img/cursos/";
+            $ex = $imagem->guessClientExtension();
+            $nomeImagem = "imagem_".$numero.".".$ex;
+            $imagem->move($dir,$nomeImagem);
+            $dados['imagem'] = $dir."/".$nomeImagem;
+
+        }
+
+        $membros = Membros::find($id);
+        $membros->update($dados);
+
+        return redirect()->route('admin.membros',compact('membros'));
+    }
+
+    public function deletar($id)
+    {
+       $membros =  Membros::find($id);
+       $membros->delete();
+       return redirect()->back();
+    }
+
+
+
+
 }
