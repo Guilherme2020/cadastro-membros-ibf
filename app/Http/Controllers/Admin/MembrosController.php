@@ -58,7 +58,9 @@ class MembrosController extends Controller
 
     public function editar($id){
         $membro = Membros::find($id);
-        return view('admin.membros.editar',array('membro'=> $membro));
+        $tipoSanguineos = $membro->tipoSanguineos();
+        $sexos = $membro->tipoSexo();
+        return view('admin.membros.editar',array('membro'=> $membro,'tipoSanguineos'=>$tipoSanguineos,'sexos'=>$sexos));
     }
 
     public function atualizar(Request $request,$id){
