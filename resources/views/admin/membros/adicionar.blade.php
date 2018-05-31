@@ -10,7 +10,7 @@
         <h3 class="center">Adicionar Membro</h3>
 
         <div class="row">
-            <form  action="{{route('admin.membros.salvar')}}" class=""  enctype="multipart/form-data" method="post">
+            <form  action="{{route('admin.membros.salvar')}}" class="col s12"  enctype="multipart/form-data" method="post">
                 {{csrf_field()}}
 
                 @include('admin.membros._form')

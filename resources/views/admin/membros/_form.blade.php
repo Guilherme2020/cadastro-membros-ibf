@@ -30,12 +30,12 @@
 </div>
 <p>Data Admissao</p>
 <div class="input-field">
-    <input type="date" name="data_admissão" value="{{isset($membro->data_admissão) ? $membro->data_admissão: ''}}" >
+    <input type="date" name="data_admissao" value="{{isset($membro->data_admissao) ? $membro->data_admissao: ''}}" >
     {{--<label>Data Nascimento</label>--}}
 </div>
 
 
-<div class="input-field">
+<div class="input-field ">
     <label for="">Tipo Sanguineo</label>
     <select name="tipo_sanguineo" id="tipo_sanguineo">
         <option value="">Escolha o tipo Sanguineo</option>
@@ -45,7 +45,7 @@
     </select>
 </div>
 
-<div class="input-field">
+<div class="input-field ">
     <label for="">Sexo</label>
     <select name="sexo" id="sexo">
 
