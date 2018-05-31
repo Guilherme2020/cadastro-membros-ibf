@@ -4,7 +4,11 @@
 
 @section('conteudo')
     <div class="container">
+
+
         <h3 class="center">Lista de Membros</h3>
+
+
         <div class="row">
             <table>
                 <thead>
